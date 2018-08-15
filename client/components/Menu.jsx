@@ -20,6 +20,7 @@ class Menu extends Component {
     let path = window.location.pathname;
     path = path.split('/')[2];
     const self = this;
+    console.log('this is path: ', path);
     axios.get(`/api/restaurant/${path}`)
       .then((response) => {
         self.setState({
@@ -52,4 +53,4 @@ class Menu extends Component {
 }
 
 export default Menu;
-ReactDOM.render(<Menu />, document.getElementById('menu'));
+// ReactDOM.render(<Menu />, document.getElementById('menu'));

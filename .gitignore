@@ -24,3 +24,5 @@ coverage
 build/
 dist/
 
+# Ignore csv files
+*.csv

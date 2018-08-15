@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  menuservice:
+    image: ferdelamad/fec-restaurantdir:menuservice
+    depends_on:
+      - 'database'
+    ports:
+      - '80:3003'
+
+  database:
+    image: mongo:latest

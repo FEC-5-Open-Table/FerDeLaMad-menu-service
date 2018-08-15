@@ -1,0 +1,10 @@
+SELECT * from menus join submenus on menus.id = submenus.resid join items on submenus.id = items.subid where menus.id = 10000;
+Begin;
+INSERT INTO menus (id, name) values (10000003, 'Test1');
+INSERT INTO submenus (id, name, resid) values (20000004, 'Dinner', 10000003);
+INSERT INTO submenus (id, name, resid) values (20000005, 'Breakfast', 10000003);
+INSERT INTO items (id, name, description, price, subid) values (100000008, 'pizza', 'pepperoni pizza', '10', 20000004);
+INSERT INTO items (id, name, description, price, subid) values (100000009, 'pizzaa', 'bacon pizza', '10', 20000004);
+INSERT INTO items (id, name, description, price, subid) values (100000010, 'pizzaaa', 'sausage pizza', '10', 20000005);
+INSERT INTO items (id, name, description, price, subid) values (100000011, 'pizzaaaa', 'chicken pizza', '10', 20000005);
+Commit;

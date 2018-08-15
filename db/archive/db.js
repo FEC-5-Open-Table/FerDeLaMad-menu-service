@@ -52,7 +52,6 @@ let menuSchema = mongoose.Schema({
       ]
   }
  ]
-
 });
 
 let Menu = mongoose.model('Menu', menuSchema);
